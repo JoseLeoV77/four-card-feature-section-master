@@ -23,7 +23,6 @@ body{
   display: flex;
   flex-direction:column;
   align-items: center;
-  background-color: var(--Very-Light-Gray);
   padding-bottom: 10%;
 }
 
@@ -38,10 +37,6 @@ body{
   gap: 8px
 }
 
-.card-title{
-  font-size: 24px;
-}
-
 b{
   color: var(--Very-Dark-Blue)
 }
@@ -52,7 +47,6 @@ b{
   align-items: center;
   font-size: 15px;
   margin-top: 64px;
-  display: flex;
   gap: 24px;
 }
 
@@ -62,11 +56,11 @@ section{
   align-items: center;
   justify-content: space-between;
   background-color: white;
-  width: 80%;
+  width: 85%;
   height: 250px;
   border-radius: 4px;
-  box-shadow: 0px 8px 10px 2px #DFE0DE;
-  border-top: 3px solid var(--Cyan);
+  box-shadow: 0px 6px 10px 0px var(--Grayish-Blue);
+  border-top: 5px solid var(--Cyan);
   padding: 28px;
 }
 
@@ -84,15 +78,15 @@ section img{
 }
 
 .border-top-red{
-  border-top: 3px solid var(--Red);
+  border-top: 5px solid var(--Red);
 }
 
 .border-top-orange{
-  border-top: 3px solid var(--Orange);
+  border-top: 5px solid var(--Orange);
 }
 
 .border-top-blue{
-  border-top: 3px solid var(--Blue);
+  border-top: 5px solid var(--Blue);
 }
 
 @media (min-width: 870px){
@@ -106,8 +100,13 @@ section img{
     width: 400px;
   }
 
+  .card-title{
+    font-size: 28px;
+    font-weight: 400;
+  }
+
   .container{
-    max-width: 75%;
+    max-width: 65%;
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(3,1fr);
