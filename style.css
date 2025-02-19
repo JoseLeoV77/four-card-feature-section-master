@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+*,
+*::after,
+*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  gap: 24px;
+  width: 100vw;
+}
+
+.card-header{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 80%;  
+  text-align: center;
+  color: var(--Grayish-Blue);
+  margin-top: 60px
+}
+
+b{
+  color: var(--Very-Dark-Blue)
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  margin-top: 64px;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  height: 250px;
+  border-radius: 4px;
+  box-shadow: 0px 8px 10px 2px #DFE0DE;
+  border-top: 3px solid var(--Cyan);
+  padding: 28px;
+}
+
+section h3{
+  color: var(--Very-Dark-Blue);
+  font-weight: 600;
+}
+
+section p{
+  color: var(--Grayish-Blue);
+}
+
+section img{
+  align-self: flex-end;
+}
+
+
+.border-top-red{
+  border-top: 3px solid var(--Red);
+}
+
+.border-top-orange{
+  border-top: 3px solid var(--Orange);
+}
+
+.border-top-blue{
+  border-top: 3px solid var(--Blue);
+}
+
+@media (min-width: 870px){
+  .card-header{
+    text-align: center;
+    width: 400px;
+  }
+
+  .container{
+    width: 65%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+    "cyanSection  redSection  blueSection"
+    "cyanSection orangeSection blueSection";
+    }
+
+  section{
+    width: 100%;
+  }
+
+  .border-top-cyan{
+    grid-column: 5;
+    grid-area: cyanSection;
+    justify-self: flex-end;
+  }
+
+  .border-top-red{
+    border-top: 3px solid var(--Red);
+    grid-area: redSection;
+  }
+  
+  .border-top-orange{
+    border-top: 3px solid var(--Orange);
+    grid-area: orangeSection;
+  }
+  
+  .border-top-blue{
+    border-top: 3px solid var(--Blue);
+    grid-area: blueSection;
+    justify-self: flex-start;
+  }
+}
