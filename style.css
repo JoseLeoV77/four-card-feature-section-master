@@ -28,7 +28,6 @@ body{
   display: flex;
   flex-direction:column;
   align-items: center;
-  gap: 24px;
   width: 100vw;
 }
 
@@ -36,7 +35,6 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
   width: 80%;  
   text-align: center;
   color: var(--Grayish-Blue);
@@ -89,7 +87,6 @@ section img{
   align-self: flex-end;
 }
 
-
 .border-top-red{
   border-top: 3px solid var(--Red);
 }
@@ -109,7 +106,7 @@ section img{
   }
 
   .container{
-    width: 68%;
+    max-width: 75%;
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(3,1fr);
